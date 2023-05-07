@@ -1,0 +1,82 @@
+h1 {
+    font-family: aileron, sans-serif;
+    font-weight: 900;
+    font-size: 6rem;
+    max-width: 50rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-family: aileron, sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    max-width: 70rem;
+    margin-bottom: 2rem;
+}
+h3 {
+    font-family: aileron, sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    max-width: 70rem;
+    margin-bottom: 1rem;
+}
+
+.flexRow{
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-family: aileron, sans-serif;
+}
+
+figure {
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+figure > * {
+    grid-area: 1/1;
+    transition: .4s;
+}
+figcaption {
+    max-width: 325px;
+}
+
+figure figcaption {
+    display: grid;
+    align-items: end;
+    font-family: aileron, sans-serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #0000;
+    padding: .75rem;
+    background: var(--c,#0009);
+    clip-path: inset(0 var(--_i,100%) 0 0);
+    -webkit-mask:
+        linear-gradient(#000 0 0),
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    -webkit-mask-clip: text, padding-box;
+}
+figure:hover figcaption{
+    --_i: 0%;
+}
+figure:hover img {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+@supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+        -webkit-mask: none;
+        color: #fff;
+    }
+}
+img {
+    height: 200px;
+    width: 350px;
+    object-fit: cover;
+}
+.link {
+    text-decoration: none
+}
