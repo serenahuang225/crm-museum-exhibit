@@ -1,17 +1,29 @@
-
 import { NavLink } from 'react-router-dom'
 import './index.scss'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
+  const [scrollAtBottom, setScrollAtBottom] = useState(false)
+  const trackScrolling = (e) => {
+    const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+
+    if (bottom) {
+      setScrollAtBottom(true)
+    } else {
+      setScrollAtBottom(false)
+    }
+  }
 
   return (
-    <div className='container'>
+    <div className='container' onScroll={trackScrolling}>
+      {!scrollAtBottom && <div className='arrowDown' />}
+
       <section className='card'>
         <h1>A FIGHT FOR JUSTICE</h1>
         <h2>This is how the Civil Rights Movement happened.</h2>
       </section>
 
-      <section className='card'>
+      <section className='card' id="section02">
         <h2>Rooms:</h2>
         <div className='flexRow'>
           <NavLink to={"/early"} className="link" style={{marginRight: "2rem"}}>
@@ -57,7 +69,7 @@ const Home = () => {
 
       <section className='card'>
         <p>A digital museum curated by Serena Huang</p>
-        <p>Last updated May 6, 2023</p>
+        <p>Last updated May 11, 2023</p>
       </section>
     </div>
   )

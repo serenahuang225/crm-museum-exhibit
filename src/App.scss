@@ -31,3 +31,70 @@ body {
   padding-right: 2rem;
   background-color: #f4f4f4;
 }
+
+h1 {
+  font-family: aileron, sans-serif;
+  font-weight: 900;
+  font-size: 6rem;
+  max-width: 50rem;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-family: aileron, sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  max-width: 70rem;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-family: aileron, sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  max-width: 70rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: aileron, sans-serif;
+}
+
+// for the scroll down arrows
+.arrowDown {
+  position: absolute;
+  left: calc(50%);
+  bottom: 70px;
+  width: 0;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  animation: bounce 1s ease-in-out infinite;
+
+  @media only screen and (min-height: 600px) {
+    bottom: 90px;
+  }
+}
+
+.arrowDown:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+}
