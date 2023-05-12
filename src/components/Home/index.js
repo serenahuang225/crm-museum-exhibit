@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import './index.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+
+import sources from './sources'
 
 const Home = () => {
   const [scrollAtBottom, setScrollAtBottom] = useState(false)
@@ -61,10 +63,9 @@ const Home = () => {
 
       <section className='card'>
         <h3>Works Cited</h3>
-        <p>https://www.blackpast.org/african-american-history/montgomery-bus-boycott-1955-56/</p>
-        <p>politico.com/story/2018/03/07/this-day-in-politics-march-7-1965-437394</p>
-        <p>https://www.washingtonpost.com/lifestyle/style/fifty-years-after-his-death-malcolm-x-speaks-to-the-current-moment/2015/02/19/4dba5ca4-091e-4303-b3ee-6a655c583655_story.html</p>
-        <p>britannica.com/biography/Martin-Luther-King-Jr</p>
+        <ul>
+        {sources.map(item => <li>{item}</li>)}
+        </ul>
       </section>
 
       <section className='card'>
