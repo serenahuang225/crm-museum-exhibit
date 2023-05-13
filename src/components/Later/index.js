@@ -18,8 +18,8 @@ const Later = () => {
       {!scrollAtBottom && <div className='arrowDown' />}
 
       <section className='card'>
-        <h1>The Later Civil Rights Movement</h1>
-        <h3>1960s</h3>
+        <h1 className='mb2'>The Later Civil Rights Movement</h1>
+        <h2>1960s</h2>
         
       </section>
     </div>

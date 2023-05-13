@@ -16,9 +16,9 @@ const Sidebar = () => {
 
   return (
     <div className="nav-bar">
-        <Link className="logo" to="/" >
+        <a href='/#title' className="logo">
             <img src={Logo} alt="Logo" />
-        </Link>
+        </a>
 
         <nav className={showNav ? 'mobile-show' : ''}>
             <NavLink exact="true" activeclassname="active" to="/" >

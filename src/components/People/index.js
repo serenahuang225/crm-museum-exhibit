@@ -18,8 +18,8 @@ const People = () => {
       {!scrollAtBottom && <div className='arrowDown' />}
 
       <section className='card'>
-        <h1>Actors in the Civil Rights Movement</h1>
-        <p>Showcasing Martin Luther King Jr., Malcom X, and John Lewis</p>
+        <h1 className="mb2">Actors in the Civil Rights Movement</h1>
+        <h3>Showcasing Martin Luther King Jr., Malcom X, and John Lewis</h3>
       </section>
     </div>
   )

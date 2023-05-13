@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100vw - 80px);
     height: 100vh;
     scroll-snap-align: start;
     margin-left: 80px;
@@ -32,30 +31,50 @@ body {
   background-color: #f4f4f4;
 }
 
+.exhibit-image {
+  max-width: 60rem;
+  width: 90%;
+  height: 40%;
+  margin-bottom: 2rem;
+}
+
 h1 {
   font-family: aileron, sans-serif;
   font-weight: 900;
   font-size: 6rem;
-  max-width: 50rem;
-  margin-bottom: 2rem;
+  max-width: calc(100vw - 20rem);
 }
 h2 {
   font-family: aileron, sans-serif;
   font-weight: 900;
   font-size: 3rem;
-  max-width: 70rem;
-  margin-bottom: 2rem;
+  max-width: calc(100vw - 20rem);
 }
 h3 {
   font-family: aileron, sans-serif;
   font-weight: 900;
   font-size: 1.5rem;
-  max-width: 70rem;
-  margin-bottom: 1rem;
+  max-width: calc(100vw - 2rem);
 }
 
 p {
   font-family: aileron, sans-serif;
+  max-width: calc(100vw - 20rem);
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+.mb2 {
+  margin-bottom: 2rem;
 }
 
 // for the scroll down arrows
