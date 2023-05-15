@@ -67,7 +67,8 @@ const Home = () => {
 
       <section className='card'>
         <p className='mb1'>A digital museum curated by Serena Huang</p>
-        <p>Last updated May 12, 2023</p>
+        <a className='mb1' href='https://github.com/serenahuang225/crm-museum-exhibit'>Code is on GitHub</a>
+        <p>Last updated May 14, 2023</p>
       </section>
     </div>
   )
